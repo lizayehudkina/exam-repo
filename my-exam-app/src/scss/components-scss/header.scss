@@ -1,0 +1,54 @@
+// .header-container {
+//     background-color: aqua;
+
+//     @include respond-to( 'tablet') {
+//         background-color: red;
+//     }
+    
+//     @include respond-to( 'laptop') {
+//         background-color: yellow;
+//     }
+// }
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0 25px 0;
+
+    @include respond-to( 'tablet') {
+        margin: 15px 0 40px 0;
+    }
+
+    @include respond-to( 'laptop') {
+        margin: 15px 0 50px 0;
+    }
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.nav-item {
+    font-weight: 600;
+    color: #5F5B5B;
+    padding-right: 25px;
+
+    &:last-of-type {
+        padding-right: 0;
+    }
+}
+
+.nav-link {
+    color: $dark-blue;
+
+    &:hover {
+        color: $yellow;
+        border: 1px solid $dark-blue;
+        border-radius: 15px;
+        padding: 7px;
+    }
+}

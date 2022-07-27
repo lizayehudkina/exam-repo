@@ -1,0 +1,58 @@
+@import "mixins";
+@import "fonts";
+@import "variables";
+@import "components-scss/header.scss";
+@import "components-scss/footer.scss";
+@import "components-scss/main.scss";
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-container,
+.main-container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    font-family: $poppins, sans-serif;
+    text-align: center;
+}
+
+.btn {
+    font-family: $poppins, sans-serif;
+    padding: 12px 23px;
+    color: $dark-blue;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid $dark-blue;
+    border-radius: 20px;
+    box-shadow: 3px 2px 3px $yellow;
+    
+}
+
+.color-yellow {
+    color: $yellow;
+    text-shadow: 1px 1px 1px $dark-blue;
+}
+

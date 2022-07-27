@@ -1,0 +1,181 @@
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: $dark-blue;
+    margin-bottom: 50px;
+
+    @include respond-to( 'tablet') {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        margin-bottom: 65px;
+    }
+}
+
+.text-section-hero {
+    max-width: 300px;
+    margin-bottom: 25px;
+
+    @include respond-to( 'tablet') {
+        max-width: 400px;
+        width: 45%;
+        margin-bottom: 0;
+    }
+}
+
+.img-section-hero {
+    @include respond-to( 'tablet') {
+        width: 40%;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 46px;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    @include respond-to( 'laptop') {
+        font-size: 38px;
+    }
+}
+
+.text-holder {
+    font-size: 20px;
+    line-height: 34px;
+
+    @include respond-to( 'laptop') {
+        font-size: 24px;
+    }
+}
+
+.img-holder {
+    max-width: 500px;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 42px;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    @include respond-to('laptop') {
+        font-size: 34px;
+    }
+}
+
+.main-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.sidebar-section {
+    width: 20%;
+    border-right: 1px solid $grey;
+    margin-right: 20px;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.filter-list input {
+    display: none;
+}
+
+.filter-list label:first-of-type {
+    margin-right: 20px;
+}
+
+.filter-list label {
+    position: relative;
+    display: block;
+    display: inline-block;
+    padding-left: 30px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+label .spanradio {
+    position: absolute;
+    border: 1px solid $dark-blue;
+    border-radius: 300px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.filter-list input:checked + label .spanradio::before {
+    content: '';
+    background: white;
+    border: 5px solid $yellow;
+    border-radius: 300px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.all-dogs-section {
+    width: 75%;
+}
+
+.list-all-dogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.card-each-dog {
+    border: 1px solid $grey;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+
+    .name-dogs {
+        display: block;
+        font-size: 20px;
+        color: $dark-blue;
+        padding-bottom: 15px;
+
+        &:hover {
+            text-shadow: 1px 0px 1px $yellow;
+            font-size: 21px;
+        }
+    }
+
+    .img-dogs {
+        margin: 0 auto;
+        max-width: 250px;
+        max-height: 250px;
+        padding-bottom: 10px;
+    }
+
+    .gender-dogs,
+    .age-dogs {
+        font-size: 14px;
+    }
+}
+
+
+
+
