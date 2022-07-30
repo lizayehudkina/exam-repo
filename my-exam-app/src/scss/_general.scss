@@ -4,6 +4,8 @@
 @import "components-scss/header.scss";
 @import "components-scss/footer.scss";
 @import "components-scss/main.scss";
+@import "components-scss/stories.scss";
+@import "components-scss/contacts.scss";
 
 
 *,
@@ -29,7 +31,8 @@ a {
 }
 
 .header-container,
-.main-container {
+.main-container,
+.contacts-container {
     max-width: 1170px;
     width: 100%;
     padding: 0 15px;
@@ -54,5 +57,16 @@ a {
 .color-yellow {
     color: $yellow;
     text-shadow: 1px 1px 1px $dark-blue;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 42px;
+    padding: 0;
+    margin: 0 0 20px 0;
+
+    @include respond-to('laptop') {
+        font-size: 34px;
+    }
 }
 

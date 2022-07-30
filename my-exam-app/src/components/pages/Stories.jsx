@@ -33,15 +33,10 @@ const Stories = () => {
         <>
         <Header/>
         <main>
-            <h2>Our happy stories</h2>
+            <h2 className="color-yellow">Our happy stories</h2>
             <blockquote>
                 “Dogs are not our whole life, but they make our lives whole.”
             </blockquote>
-
-
-
-
-
             <div>
                 <Slider {...settings}>
                 <div>

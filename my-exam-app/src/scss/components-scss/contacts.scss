@@ -1,0 +1,56 @@
+.contacts-container {
+    h2{ 
+        margin-bottom: 30px;
+    }
+
+}
+
+.form-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    gap: 15px;
+    margin-bottom: 25px;
+
+    label {
+        font-size: 14px;
+        color: $dark-blue;
+        margin-bottom: 7px;
+    }
+
+    input {
+        color: $dark-blue;
+        border: 1px solid $dark-blue;
+        border-radius: 15px;
+        margin-top: 5px;
+        height: 35px;
+        width: 250px;
+        cursor: default;
+        outline: none;
+    }
+    
+    input:focus {
+        border-radius: 0px;
+    }
+
+    textarea {
+        color: $dark-blue;
+        border: 1px solid $dark-blue;
+        border-radius: 15px;
+        margin-top: 5px;
+        height: 65px;
+        width: 300px;
+        cursor: default;
+        outline: none;
+    }
+    
+    textarea:focus {
+        border-radius: 0px;
+    }
+}
+
+.btn-form {
+    margin-bottom: 50px;
+}
