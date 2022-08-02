@@ -80,6 +80,26 @@ h2 {
     width: 20%;
     border-right: 1px solid $grey;
     margin-right: 20px;
+
+    h3 {
+        text-align: start;
+    }
+
+    .btn {
+        padding: 12px 23px;
+        font-size: 15px;
+        font-weight: 600;
+        background-color: transparent;
+        border: 1px solid $dark-blue;
+        box-shadow: none;
+        display: block;
+        text-align: start;
+
+        &:hover{
+            font-size: 17px;
+            box-shadow: none;
+        }
+    }
 }
 
 .filter-list {
@@ -89,6 +109,10 @@ h2 {
     align-items: flex-start;
     gap: 10px;
     padding-bottom: 20px;
+
+    &:last-of-type{
+        padding-bottom: 30px;
+    }
 }
 
 .filter-list input {
@@ -150,17 +174,23 @@ label .spanradio {
     border-radius: 20px;
     padding: 10px;
     text-align: center;
+    line-height: 20px;
+
+    &:hover {
+        box-shadow: 2px 5px 15px $dark-blue;
+        transform: scale(1.01);
+    }
+
+    .threats {
+        font-weight: 550;
+    }
 
     .name-dogs {
         display: block;
         font-size: 20px;
+        font-weight: 550;
         color: $dark-blue;
         padding-bottom: 15px;
-
-        &:hover {
-            text-shadow: 1px 0px 1px $yellow;
-            font-size: 21px;
-        }
     }
 
     .img-dogs {
@@ -171,7 +201,8 @@ label .spanradio {
     }
 
     .gender-dogs,
-    .age-dogs {
+    .age-dogs,
+    .weight-dogs {
         font-size: 14px;
     }
 }

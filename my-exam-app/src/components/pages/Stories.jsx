@@ -17,6 +17,7 @@ import happyStories9 from '../../img/happy-stories-9.PNG';
 
 
 
+
 const Stories = () => {
 
     const settings = {
@@ -24,47 +25,56 @@ const Stories = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        // loop: true,
         slidesToScroll: 1,
+        // autoplay: true,
+        // autoplaySpeed: 2500,
         arrow: true,
       };
     
     return (
         <>
         <Header/>
-        <main>
+        <main className="stories-container">
             <h2 className="color-yellow">Our happy stories</h2>
-            <blockquote>
-                “Dogs are not our whole life, but they make our lives whole.”
-            </blockquote>
-            <div>
+            
+            <div className="slick-container ">
                 <Slider {...settings}>
-                <div>
-                    <img src={happyStories1} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories2} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories3} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories4} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories5} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories7} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories8} alt="happy dog in the family" />
-                </div>
-                <div>
-                    <img src={happyStories9} alt="happy dog in the family" />
-                </div>
+                    <div>
+                        <img src={happyStories5} alt="happy dog in the family" />
+                    </div>
+                    <div>
+                        <img src={happyStories2} alt="happy dog in the family" />
+                    </div>
+                    <div>
+                        <img src={happyStories3} alt="happy dog in the family" />
+                    </div>
+                    <div>
+                        <img src={happyStories4} alt="happy dog in the family" />
+                    </div>
+                    
+                    <div>
+                        <img src={happyStories7} alt="happy dog in the family" />
+                    </div>
+                    <div>
+                        <img src={happyStories8} alt="happy dog in the family" />
+                    </div>
+                    <div>
+                        <img src={happyStories9} alt="happy dog in the family" />
+                    </div>
+                    <div>
+                        <img src={happyStories1} alt="happy dog in the family" />
+                    </div>
                 </Slider>
             </div>
+
+            <blockquote className="quote">
+                <div className="quote-holder">
+                    <p><span className="color-yellow">“</span>Dogs are not our whole life, 
+                    but they make our lives whole.</p>
+                </div>
+                <figcaption className="author">Roger Caras</figcaption>
+            </blockquote>
+            
 
 
         </main>
