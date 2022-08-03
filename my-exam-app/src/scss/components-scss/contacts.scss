@@ -29,10 +29,10 @@
         width: 250px;
         cursor: default;
         outline: none;
+        padding-left: 10px;
     }
     
     input:focus {
-        border-radius: 0px;
         border: 2px solid $dark-blue;
 
     }
@@ -49,11 +49,16 @@
     }
     
     textarea:focus {
-        border-radius: 0px;
         border: 2px solid $dark-blue;
     }
 }
 
 .btn-form {
     margin-bottom: 50px;
+}
+
+.error {
+    font-size: 10px;
+    color: rgb(233, 126, 126);
+    padding: 7px 0 5px 10px;
 }

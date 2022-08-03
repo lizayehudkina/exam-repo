@@ -101,11 +101,12 @@ import { useState } from "react";
 
 
 const Main = () => {
+    
     const [data, setData]=useState (DogsList);
 
     const filterResultGender=(genderDogs)=>{
     const resultGender=DogsList.filter((genDogs)=>{
-        return genDogs.gender==genderDogs;
+        return genDogs.gender===genderDogs;
             });
         setData(resultGender); 
     }
@@ -132,14 +133,14 @@ const Main = () => {
 
     const filterResultBreede=(breedeDogs)=>{
     const resultBreede=DogsList.filter((brDogs)=>{
-        return brDogs.breed==breedeDogs;
+        return brDogs.breed===breedeDogs;
             });
         setData(resultBreede); 
     }
 
     const filterResultHair=(DogsHair)=>{
     const resultHair=DogsList.filter((DogsH)=>{
-        return DogsH.typeOfHair==DogsHair;
+        return DogsH.typeOfHair===DogsHair;
             });
         setData(resultHair); 
 }
