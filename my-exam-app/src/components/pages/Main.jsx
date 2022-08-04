@@ -5,7 +5,6 @@ import heroPhoto from '../../img/hero-photo.PNG';
 import DogsList from "../DogsList";
 import { useState } from "react";
 
-
 // const dogs = [
 //     {
 //         id: 1,
@@ -99,7 +98,6 @@ import { useState } from "react";
 //     },
 // ]
 
-
 const Main = () => {
     
     const [data, setData]=useState (DogsList);
@@ -145,10 +143,6 @@ const Main = () => {
         setData(resultHair); 
 }
 
-
-
-    
-
     return (
         <>
         <Header/>
@@ -175,9 +169,10 @@ const Main = () => {
             <h2 className="color-yellow">Search Friend</h2>
                 
             <div className="main-section">
-                
+
                 <aside className="sidebar-section">
                     <h3>Filter</h3>
+                    
                     <li class="filter-list">Gender:
                         <input onClick={()=>filterResultGender('male')} id="male" type="radio" name="radio"/>
                         <label for="male"><span class="spanradio"></span>Male</label>
@@ -210,26 +205,10 @@ const Main = () => {
                         <label for="shaggy"><span class="spanradio"></span>Shaggy</label>
                     </li>
 
-                    <button className="btn" onClick={()=>setData(DogsList)}>See all</button>
-
-                    
-
-                     
+                    <button className="btn" onClick={()=>setData(DogsList)}>See all</button>  
                 </aside>
                 
                 <div className="all-dogs-section">
-                    {/* <ul className="list-all-dogs">
-                        {
-                        dogs.map(dog => (
-                        <li className="card-each-dog" key = {dog.id}>
-                            <a className="name-dogs" href="#">{dog.name}</a>
-                            <img className="img-dogs" src={dog.img} alt={dog.name}/>
-                            <li className="gender-dogs">{dog.gender}</li>
-                            <li className="age-dogs">{dog.age}</li>
-                        </li>
-                            ))
-                        }
-                    </ul> */}
                     <ul className="list-all-dogs">
                         {data.map((values)=>{
                             const{id, name, img, gender, ageDigit, ageText, weight_will_be}=values;
@@ -245,7 +224,6 @@ const Main = () => {
                                 </>
                             )
                         })}
-                        
                     </ul>
                 </div>
             </div>

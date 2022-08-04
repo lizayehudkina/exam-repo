@@ -1,22 +1,31 @@
 .footer-container {
-    background-color: $grey;
+    background: $gradient;
     border-top: 1px solid $dark-blue;
     margin: 0 auto;
     font-family: $poppins, sans-serif;
     text-align: center;
-    padding: 30px 0 0 0;
+    padding: 20px 0 20px 0;
 
     h4 {
         margin: 0;
-        padding: 0 0 15px 0;
+        padding: 0 0 5px 0;
+        font-size: 14px;
+
+        @include respond-to('tablet') {
+            padding: 0 0 15px 0;
+            font-size: 16px;
+        }
     }
 
-    
-
     .footer-insta-img {
-        width: 40px;  
-        height: 40px;      
+        width: 30px;  
+        height: 30px;      
         margin: 0 auto;
+
+        @include respond-to('tablet') {
+            width: 40px;  
+            height: 40px; 
+        }
 
         &:hover{
             border: 2px solid $yellow;
@@ -27,9 +36,18 @@
 
     .footer-text-holder {
         line-height: 25px;
-    }
+        font-size: 14px;
 
-    .footer-logo {
-        margin: 0 auto;
+        @include respond-to('tablet') {
+            font-size: 16px;
+        }
+
+        p {
+            margin: 0;
+
+            @include respond-to('tablet') {
+                margin: 5px 0;
+            }
+        }
     }
 }

@@ -4,12 +4,12 @@
     justify-content: space-around;
     align-items: center;
     color: $dark-blue;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
-    @include respond-to( 'tablet') {
+    @include respond-to('tablet') {
         flex-wrap: nowrap;
         flex-direction: row;
-        margin-bottom: 65px;
+        margin-bottom: 50px;
     }
 }
 
@@ -17,7 +17,7 @@
     max-width: 300px;
     margin-bottom: 25px;
 
-    @include respond-to( 'tablet') {
+    @include respond-to('tablet') {
         max-width: 400px;
         width: 45%;
         margin-bottom: 0;
@@ -25,7 +25,7 @@
 }
 
 .img-section-hero {
-    @include respond-to( 'tablet') {
+    @include respond-to('tablet') {
         width: 40%;
     }
 }
@@ -58,28 +58,37 @@ h1 {
     }
 }
 
-h2 {
-    font-size: 32px;
-    line-height: 42px;
-    padding: 0;
-    margin: 0 0 20px 0;
+.main-section {
+    padding-bottom: 25px;
+
+    @include respond-to('tablet') {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-bottom: 50px;
+    }
 
     @include respond-to('laptop') {
-        font-size: 34px;
+        padding-bottom: 70px;
     }
 }
 
-.main-section {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding-bottom: 50px;
-}
-
 .sidebar-section {
-    width: 20%;
-    border-right: 1px solid $grey;
-    margin-right: 20px;
+    display: none;
+
+    @include respond-to('tablet') {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 25%;
+        border-right: 1px solid $grey;
+        margin-right: 20px; 
+
+        @include respond-to('laptop') {
+            width: 20%;
+        }
+    }
 
     h3 {
         text-align: start;
@@ -159,14 +168,33 @@ label .spanradio {
 }
 
 .all-dogs-section {
-    width: 75%;
+
+    @include respond-to('tablet') {
+        width: 72%;
+    }
+
+    @include respond-to('laptop') {
+        width: 77%;
+    }
+
 }
 
 .list-all-dogs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     gap: 20px;
-    
+
+    @include respond-to('tablet') {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    @include respond-to('laptop') {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 .card-each-dog {
@@ -206,7 +234,3 @@ label .spanradio {
         font-size: 14px;
     }
 }
-
-
-
-

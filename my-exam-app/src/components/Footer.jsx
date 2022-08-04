@@ -11,13 +11,9 @@ const Footer = () => {
                 <a className="footer-link" href="https://www.instagram.com/sobaki_i_elena/">
                     <img className="footer-insta-img" src={instaLink} alt="instagram link" />
                 </a>
-
+            
             <div className="footer-text-holder"> 
                 <p><strong>If you want help, you can donate:</strong> <br /> 4149 6293 5269 9383</p>
-            </div>
-
-            <div className="logo-holder">
-                <img className="footer-logo" src={logo} alt="logo" width="130" height="80"/>
             </div>
         </footer>
         </>

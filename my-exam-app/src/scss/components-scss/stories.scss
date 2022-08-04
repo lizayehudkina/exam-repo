@@ -1,26 +1,18 @@
-.color-yellow {
-    padding-bottom: 20px;
-}
 .slick-container{ 
-    max-width: 700px;
-    margin: 0 auto;
-    padding-bottom: 80px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-bottom: 80px;
 }
 
 img {
-    display: block;
-    margin: 0 auto;
-    max-height: 605px;
+  display: block;
+  margin: 0 auto;
+  max-height: 605px;
 }
 
 .slick-dots {
-    bottom: -40px !important;
-  }
-  @include respond-to('laptop') {
-    .slick-dots {
-      bottom: -40px !important;
-    }
-  }
+  bottom: -40px !important;
+}
 
 .slick-next::before,
 .slick-prev::before {
@@ -52,25 +44,25 @@ img {
 }
 
 .quote{
-    margin: 0 auto 80px auto;    
-    max-width: 600px;
-    padding: 30px 30px;
-    color: $dark-blue;
-    border: 1px solid $dark-blue;
-    border-radius: 20px;
-    background-color: $white;
-    box-shadow: 5px 10px 18px $dark-blue;
+  margin: 0 auto 80px auto;    
+  max-width: 600px;
+  padding: 30px 30px;
+  color: $dark-blue;
+  border: 1px solid $dark-blue;
+  border-radius: 20px;
+  background-color: $white;
+  box-shadow: 5px 10px 18px $dark-blue;
 
-    .quote-holder {
-        font-size: 20px;
-        line-height: 30px;
+  .quote-holder {
+    font-size: 20px;
+    line-height: 30px;
 
-        .color-yellow {
-            font-size: 56px;
-        }
+    .color-yellow {
+      font-size: 56px;
     }
+  }
 
-    .author {
-        font-weight: 500;
-    }
+  .author {
+      font-weight: 500;
+  }
 }

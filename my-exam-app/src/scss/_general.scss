@@ -7,7 +7,6 @@
 @import "components-scss/stories.scss";
 @import "components-scss/contacts.scss";
 
-
 *,
 *::before,
 *::after {
@@ -56,9 +55,7 @@ a {
     &:hover{
         font-size: 18px;
         box-shadow: 1px 2px 3px $dark-blue;
-
     }
-    
 }
 
 .color-yellow {
@@ -71,6 +68,10 @@ h2 {
     line-height: 42px;
     padding: 0;
     margin: 0 0 20px 0;
+
+    @include respond-to('tablet') {
+        margin: 0 0 30px 0;
+    }
 
     @include respond-to('laptop') {
         font-size: 34px;

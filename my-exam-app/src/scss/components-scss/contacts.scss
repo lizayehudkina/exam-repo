@@ -2,7 +2,6 @@
     h2{ 
         margin-bottom: 30px;
     }
-
 }
 
 .form-list {
@@ -12,7 +11,15 @@
     align-items: center;
     text-align: start;
     gap: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+    
+        @include respond-to('tablet') {
+            margin-bottom: 50px;
+        }
+
+        @include respond-to('laptop') {
+            margin-bottom: 60px;
+        }
 
     label {
         font-size: 14px;
@@ -51,10 +58,6 @@
     textarea:focus {
         border: 2px solid $dark-blue;
     }
-}
-
-.btn-form {
-    margin-bottom: 50px;
 }
 
 .error {
