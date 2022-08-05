@@ -6,15 +6,15 @@ import logo from '../img/logo.svg';
 
 const Header = () => {
 
-    // const [active, setActive] = useState("false");
+    const [active, setActive] = useState("false");
 
-    // const handleToggle = () => {
-    //     setActive(!active);
-    //   };
+    const handleToggle = () => {
+        setActive(!active);
+      };
 
-return (
-    <header className="header">
-        {/* <header className={active ? "active" : null}> */}
+      return (
+    // <header className="header">
+    <header className={active ? "active" : null}>
         <div className="header-container header" >
             <div className="logo-holder">
                 <img src={logo} alt="logo" width="130" height="80"/>
@@ -31,8 +31,8 @@ return (
             </div>
 
             <button className="nav-opener js-nav-opener">
-                <span></span>
-                {/* <span onClick={handleToggle}></span> */}
+                {/* <span></span> */}
+                {<span onClick={handleToggle}></span>}
             </button>
         </div>
     </header>

@@ -8,7 +8,7 @@ const Footer = () => {
         <>
         <footer className="footer-container">
             <h4>You can contact us via Instagram:</h4>
-                <a className="footer-link" href="https://www.instagram.com/sobaki_i_elena/">
+                <a className="footer-link" href="https://www.instagram.com/sobaki_i_elena/" target='_blank'>
                     <img className="footer-insta-img" src={instaLink} alt="instagram link" />
                 </a>
             
