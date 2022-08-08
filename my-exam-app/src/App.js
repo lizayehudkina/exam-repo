@@ -4,9 +4,6 @@ import Main from './components/pages/Main';
 import Stories from './components/pages/Stories';
 import Contacts from './components/pages/Contacts';
 
-
-
-
 function App() {
   return (
     <main>
@@ -16,7 +13,6 @@ function App() {
         <Route path = "contacts" element={<Contacts/>} />
       </Routes>
     </main>
-    
   );
 }
 

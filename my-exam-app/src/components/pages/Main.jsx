@@ -1,102 +1,8 @@
-import { Link } from "react-router-dom";
 import Header from "../Header";
 import Footer from "../Footer";
 import heroPhoto from '../../img/hero-photo.PNG';
 import DogsList from "../DogsList";
 import { useState } from "react";
-
-// const dogs = [
-//     {
-//         id: 1,
-//         name: 'Brauni',
-//         gender: 'male',
-//         age: '8 month',
-//         puppy: true,
-//         weight_will_be: '25 kg',
-//         breed: 'large',
-//         img: 'img/brauni-1.PNG',
-//     },
-//     {
-//         id: 2,
-//         name: 'Malysh',
-//         gender: 'male',
-//         age: '3 month',
-//         puppy: true,
-//         weight_will_be: '10 kg',
-//         breed: 'medium',
-//         img: 'img/malysh-1.PNG',
-//     },
-//     {
-//         id: 3,
-//         name: 'Miia',
-//         gender: 'female',
-//         age: '3 month',
-//         puppy: true,
-//         weight_will_be: '15 kg',
-//         breed: 'large',
-//         img: 'img/mia-1.PNG',
-//     },
-//     {
-//         id: 4,
-//         name: 'Mimi',
-//         gender: 'female',
-//         age: '3 month',
-//         puppy: true,
-//         weight_will_be: '15 kg',
-//         breed: 'large',
-//         img: 'img/mimi-1.PNG',
-//     },
-//     {
-//         id: 5,
-//         name: 'Pusha',
-//         gender: 'female',
-//         age: '2 years',
-//         puppy: false,
-//         weight_will_be: '15 kg',
-//         breed: 'large',
-//         img: 'img/pusha-1.PNG',
-//     },
-//     {
-//         id: 6,
-//         name: 'Knopa',
-//         gender: 'female',
-//         age: '1,5 years',
-//         puppy: false,
-//         weight_will_be: '15 kg',
-//         breed: 'large',
-//         img: 'img/knopa-1.PNG',
-//     },
-//     {
-//         id: 7,
-//         name: 'Molli',
-//         gender: 'female',
-//         age: '4 month',
-//         puppy: true,
-//         weight_will_be: '15 kg',
-//         breed: 'large',
-//         img: 'img/molli-1.PNG',
-//     },
-//     {
-//         id: 8,
-//         name: 'Slyvka',
-//         gender: 'female',
-//         age: '3 years',
-//         puppy: false,
-//         weight_will_be: '7 kg',
-//         breed: 'medium',
-//         img: 'img/slyvka-1.PNG',
-//     },
-//     {
-//         id: 9,
-//         name: 'Zaichyk',
-//         gender: 'male',
-//         age: '1,5 years',
-//         puppy: false,
-//         weight_will_be: '30 kg',
-//         breed: 'large',
-//         img: 'img/zaichyk-1.PNG',
-//     },
-// ]
 
 const Main = () => {
     
@@ -108,6 +14,7 @@ const Main = () => {
             });
         setData(resultGender); 
     }
+
     const filterAgeYoung=()=>{
     const resultAge=DogsList.filter((aDigit)=>{
         return aDigit.ageDigit<1;
@@ -141,7 +48,7 @@ const Main = () => {
         return DogsH.typeOfHair===DogsHair;
             });
         setData(resultHair); 
-}
+    }
 
     return (
         <>

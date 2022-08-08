@@ -43,9 +43,8 @@
     
     .nav-list {
         position: absolute;
-        top: 120px;
+        top: 80px;
         left: 0;
-        // transform: translateX(50%);
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -59,6 +58,7 @@
         background: -webkit-linear-gradient(-45deg, rgba(252,163,17,1) 0%,rgba(229,229,229,1) 55%,rgba(229,229,229,1) 72%,rgba(20,33,61,1) 99%);
         width: 100vw;
         height: 100vh;
+        padding: 35px 0 0 25px;
     }
 
     .nav-link {

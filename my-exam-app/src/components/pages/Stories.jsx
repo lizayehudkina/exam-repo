@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-
 import Header from "../Header";
 import Footer from "../Footer";
 import happyStories1 from '../../img/happy-stories-1.PNG';
@@ -62,15 +61,13 @@ const Stories = () => {
                     </div>
                 </Slider>
             </div>
-
             {/* <blockquote className="quote">
                 <div className="quote-holder">
                     <p><span className="color-yellow">“</span>Dogs are not our whole life, 
                     but they make our lives whole.</p>
                 </div>
                 <figcaption className="author">Roger Caras</figcaption>
-            </blockquote> */}
-            
+            </blockquote> */} 
         </main>
         <Footer/>
         </>
@@ -78,4 +75,3 @@ const Stories = () => {
 }
 
 export default Stories;
-
