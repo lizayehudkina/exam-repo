@@ -1,0 +1,127 @@
+// тут пишу, як виглядає на таблеті і десктопі: 
+.navbar {
+    max-height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(252, 163, 17, 0.84);
+}
+
+.nav-list > a{
+    color: #14213D;
+    font-weight: 600;
+    font-size: 22px;
+    // display: block;
+    position: relative;
+    margin-right: 20px;
+
+
+    &:hover {
+        color: #14213D;
+        border: 1px solid #14213D;
+        border-radius: 15px;
+        padding: 7px 10px;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.nav-toggle {
+    display: none;
+}
+
+// тут пишу як виглядає на мобайл
+@media (max-width: 767px) {
+    .navbar {
+        background: rgba(252, 163, 17, 0.84);
+        padding: 0 15px;
+        margin-bottom: 20px;
+    }
+    
+    .nav-list {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        // transform: translateX(50%);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: translateX(-100%);
+        transition: all ease-in-out 0.4s;
+    }
+
+    .nav-list.open {
+        transform: translateX(0);
+        background: -webkit-linear-gradient(-45deg, rgba(252,163,17,1) 0%,rgba(229,229,229,1) 55%,rgba(229,229,229,1) 72%,rgba(20,33,61,1) 99%);
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .nav-link {
+        color: #14213D;
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 20px;
+
+        &:hover {
+            border-bottom: 1px solid #14213D;
+        }
+    }
+    
+    .navbar > .nav-toggle {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .nav-toggle > .bar {
+        position: relative;
+        width: 32px;
+        height: 2px;
+        background: #14213D;
+    }
+
+    .nav-toggle > .bar::before,
+    .nav-toggle > .bar::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: #14213D;
+        border-radius: 2px;
+        transition: all ease-in-out 0.4s;
+    }
+
+    .nav-toggle > .bar::before {
+        width: 25px;
+        transform: translateY(-8px);
+        right: 0;
+    }
+
+    .nav-toggle > .bar::after {
+        width: 25px;
+        transform: translateY(8px);
+        right: 0;
+    }
+
+    .nav-toggle.open > .bar {
+        transform: translateX(-40px);
+        background: transparent;   
+    }
+
+    .nav-toggle.open > .bar::before {
+        width: 32px;
+        transform: rotate(45deg) translate(26px, -26px);
+    }
+
+    .nav-toggle.open > .bar::after {
+        width: 32px;
+        transform: rotate(-45deg) translate(26px, 26px);
+    }
+}

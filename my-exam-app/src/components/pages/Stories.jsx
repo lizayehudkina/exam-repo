@@ -14,10 +14,6 @@ import happyStories7 from '../../img/happy-stories-7.PNG';
 import happyStories8 from '../../img/happy-stories-8.PNG';
 import happyStories9 from '../../img/happy-stories-9.PNG';
 
-
-
-
-
 const Stories = () => {
 
     const settings = {
@@ -26,8 +22,8 @@ const Stories = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
-        // autoplaySpeed: 2500,
+        autoplay: true,
+        autoplaySpeed: 2500,
         arrow: true,
       };
     
@@ -67,16 +63,14 @@ const Stories = () => {
                 </Slider>
             </div>
 
-            <blockquote className="quote">
+            {/* <blockquote className="quote">
                 <div className="quote-holder">
                     <p><span className="color-yellow">“</span>Dogs are not our whole life, 
                     but they make our lives whole.</p>
                 </div>
                 <figcaption className="author">Roger Caras</figcaption>
-            </blockquote>
+            </blockquote> */}
             
-
-
         </main>
         <Footer/>
         </>

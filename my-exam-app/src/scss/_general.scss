@@ -6,6 +6,7 @@
 @import "components-scss/main.scss";
 @import "components-scss/stories.scss";
 @import "components-scss/contacts.scss";
+@import "components-scss/navbar.scss";
 
 *,
 *::before,
@@ -38,6 +39,15 @@ a {
     margin: 0 auto;
     font-family: $poppins, sans-serif;
     text-align: center;
+}
+
+.navbar {
+    padding: 0 15px;
+    margin-bottom: 20px;
+
+    @include respond-to('tablet') {
+        margin-bottom: 20px;
+    }
 }
 
 .btn {
