@@ -4,7 +4,7 @@ import heroPhoto from '../../img/hero-photo.PNG';
 import DogsList from "../DogsList";
 import { useState } from "react";
 
-const Main = () => {
+const SearchDog = () => {
     
     const [data, setData]=useState (DogsList);
 
@@ -140,4 +140,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default SearchDog;
