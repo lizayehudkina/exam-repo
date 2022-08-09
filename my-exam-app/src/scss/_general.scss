@@ -43,11 +43,6 @@ a {
 
 .navbar {
     padding: 0 15px;
-    margin-bottom: 20px;
-
-    @include respond-to('tablet') {
-        margin-bottom: 20px;
-    }
 }
 
 .btn {

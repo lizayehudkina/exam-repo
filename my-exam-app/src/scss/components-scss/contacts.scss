@@ -11,14 +11,14 @@
     align-items: center;
     text-align: start;
     gap: 15px;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     
         @include respond-to('tablet') {
-            margin-bottom: 50px;
+            padding-bottom: 50px;
         }
 
         @include respond-to('laptop') {
-            margin-bottom: 60px;
+            padding-bottom: 60px;
         }
 
     label {

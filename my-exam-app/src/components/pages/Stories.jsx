@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "../Header";
 import Footer from "../Footer";
+import background from '../../img/background-stories.png';
 import happyStories1 from '../../img/happy-stories-1.PNG';
 import happyStories2 from '../../img/happy-stories-2.PNG';
 import happyStories3 from '../../img/happy-stories-3.PNG';
@@ -29,7 +30,8 @@ const Stories = () => {
     return (
         <>
         <Header/>
-        <main className="stories-container">
+        {/* style={{ backgroundImage: `url(${background})`, width: '100%'}} */}
+        <main className="stories-container" style={{ backgroundImage: `url(${background})`, width: '100%', backgroundSize: 'cover'}}>
             <h2 className="color-yellow">Our happy stories</h2>
             
             <div className="slick-container ">
