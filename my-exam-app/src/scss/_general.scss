@@ -55,6 +55,7 @@ a {
     border: 1px solid $dark-blue;
     border-radius: 20px;
     box-shadow: 3px 2px 3px $yellow;
+    z-index: 2;
 
     &:hover{
         font-size: 18px;

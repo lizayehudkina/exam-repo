@@ -8,11 +8,10 @@ const Navbar =() => {
 
     const [isOpen, setIsOpen] = useState (false);
 
-
     return(
         <div className="navbar">
             <div className="logo-holder">
-                <img src={logo} alt="logo" width="130" height="80"/>
+                <Link className="nav-link" to = "/"><img src={logo} alt="logo" width="130" height="80" /></Link>
             </div>
 
             <div className="nav-holder">
@@ -34,4 +33,3 @@ const Navbar =() => {
 }
 
 export default Navbar;
-

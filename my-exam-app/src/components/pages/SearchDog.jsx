@@ -52,90 +52,90 @@ const SearchDog = () => {
 
     return (
         <>
-        <Header/>
-        <main className="main-container">
+            <Header/>
+                <main className="main-container">
 
-            <div className="hero-section">
+                    <div className="hero-section">
 
-                <div className="text-section-hero"> 
-                    <h1><span className="color-yellow">Find</span> your new <span className="color-yellow">friends</span></h1>
-                    <div className="text-holder">
-                        <p>Make your life more happy with us to have 
-                            a little new friends</p>
+                        <div className="text-section-hero"> 
+                            <h1><span className="color-yellow">Find</span> your new <span className="color-yellow">friends</span></h1>
+                            <div className="text-holder">
+                                <p>Make your life more happy with us to have 
+                                    a little new friends</p>
+                            </div>
+                            <button className="btn">Search Friend</button>
+                        </div>
+
+                        <div className="img-section-hero">
+                            <div className="img-holder">
+                                <img src={heroPhoto} alt="logo"/>
+                            </div>
+                        </div>
                     </div>
-                    <button className="btn">Search Friend</button>
-                </div>
+                        
+                    <h2 className="color-yellow">Search Friend</h2>
+                        
+                    <div className="main-section">
 
-                <div className="img-section-hero">
-                    <div className="img-holder">
-                        <img src={heroPhoto} alt="logo"/>
+                        <aside className="sidebar-section">
+                            <h3>Filter</h3>
+                            
+                            <li class="filter-list">Gender:
+                                <input onClick={()=>filterResultGender('male')} id="male" type="radio" name="radio"/>
+                                <label htmlFor="male"><span className="spanradio"></span>Male</label>
+                                <input onClick={()=>filterResultGender('female')} id="female" type="radio" name="radio"/>
+                                <label htmlFor="female"><span className="spanradio"></span>Female</label>
+                            </li>
+
+                            <li class="filter-list">Age (years):
+                                <input onClick={()=>filterAgeYoung()} id="young" type="radio" name="radio"/>
+                                <label htmlFor="young"><span className="spanradio"></span>Less than 1</label>
+                                <input onClick={()=>filterAgeMiddle()}id="middle" type="radio" name="radio"/>
+                                <label htmlFor="middle"><span className="spanradio"></span>1-3</label>
+                                <input onClick={()=>filterAgeGrown()} id="grown" type="radio" name="radio"/>
+                                <label htmlFor="grown"><span className="spanradio"></span>More than 3</label>
+                            </li> 
+
+                            <li class="filter-list">Breed:
+                                <input onClick={()=>filterResultBreede('small')} id="small" type="radio" name="radio"/>
+                                <label htmlFor="small"><span className="spanradio"></span>Small</label>
+                                <input onClick={()=>filterResultBreede('medium')} id="medium" type="radio" name="radio"/>
+                                <label htmlFor="medium"><span className="spanradio"></span>Medium</label>
+                                <input onClick={()=>filterResultBreede('large')} id="large" type="radio" name="radio"/>
+                                <label htmlFor="large"><span className="spanradio"></span>Large</label>
+                            </li>
+
+                            <li class="filter-list">Type of hair:
+                                <input onClick={()=>filterResultHair('smooth')} id="smooth" type="radio" name="radio"/>
+                                <label htmlFor="smooth"><span className="spanradio"></span>Smooth-haired</label>
+                                <input onClick={()=>filterResultHair('shaggy')} id="shaggy" type="radio" name="radio"/>
+                                <label htmlFor="shaggy"><span className="spanradio"></span>Shaggy</label>
+                            </li>
+
+                            <button className="btn" onClick={()=>setData(DogsList)}>See all</button>  
+                        </aside>
+                        
+                        <div className="all-dogs-section">
+                            <ul className="list-all-dogs">
+                                {data.map((values)=>{
+                                    const{id, name, img, gender, ageDigit, ageText, weight_will_be}=values;
+                                    return(
+                                        <>
+                                            <li className="card-each-dog" key = {id}>
+                                                <a className="name-dogs" href="#">{name}</a>
+                                                <img className="img-dogs" src={img} alt={name}/>
+                                                <li className="gender-dogs"><span className="threats">Gender:</span> {gender}</li>
+                                                <li className="age-dogs"><span className="threats">Age:</span> {ageDigit} {ageText}</li>
+                                                <li className="weight-dogs"><span className="threats">Weight will be (around):</span> {weight_will_be}</li>
+                                            </li>
+                                        </>
+                                    )
+                                })}
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </div>
-                
-            <h2 className="color-yellow">Search Friend</h2>
-                
-            <div className="main-section">
-
-                <aside className="sidebar-section">
-                    <h3>Filter</h3>
-                    
-                    <li class="filter-list">Gender:
-                        <input onClick={()=>filterResultGender('male')} id="male" type="radio" name="radio"/>
-                        <label for="male"><span class="spanradio"></span>Male</label>
-                        <input onClick={()=>filterResultGender('female')} id="female" type="radio" name="radio"/>
-                        <label for="female"><span class="spanradio"></span>Female</label>
-                    </li>
-
-                    <li class="filter-list">Age (years):
-                        <input onClick={()=>filterAgeYoung()} id="young" type="radio" name="radio"/>
-                        <label for="young"><span class="spanradio"></span>Less than 1</label>
-                        <input onClick={()=>filterAgeMiddle()}id="middle" type="radio" name="radio"/>
-                        <label for="middle"><span class="spanradio"></span>1-3</label>
-                        <input onClick={()=>filterAgeGrown()} id="grown" type="radio" name="radio"/>
-                        <label for="grown"><span class="spanradio"></span>More than 3</label>
-                    </li> 
-
-                    <li class="filter-list">Breed:
-                        <input onClick={()=>filterResultBreede('small')} id="small" type="radio" name="radio"/>
-                        <label for="small"><span class="spanradio"></span>Small</label>
-                        <input onClick={()=>filterResultBreede('medium')} id="medium" type="radio" name="radio"/>
-                        <label for="medium"><span class="spanradio"></span>Medium</label>
-                        <input onClick={()=>filterResultBreede('large')} id="large" type="radio" name="radio"/>
-                        <label for="large"><span class="spanradio"></span>Large</label>
-                    </li>
-
-                    <li class="filter-list">Type of hair:
-                        <input onClick={()=>filterResultHair('smooth')} id="smooth" type="radio" name="radio"/>
-                        <label for="smooth"><span class="spanradio"></span>Smooth-haired</label>
-                        <input onClick={()=>filterResultHair('shaggy')} id="shaggy" type="radio" name="radio"/>
-                        <label for="shaggy"><span class="spanradio"></span>Shaggy</label>
-                    </li>
-
-                    <button className="btn" onClick={()=>setData(DogsList)}>See all</button>  
-                </aside>
-                
-                <div className="all-dogs-section">
-                    <ul className="list-all-dogs">
-                        {data.map((values)=>{
-                            const{id, name, img, gender, ageDigit, ageText, weight_will_be}=values;
-                            return(
-                                <>
-                                <li className="card-each-dog" key = {id}>
-                                    <a className="name-dogs" href="#">{name}</a>
-                                    <img className="img-dogs" src={img} alt={name}/>
-                                    <li className="gender-dogs"><span className="threats">Gender:</span> {gender}</li>
-                                    <li className="age-dogs"><span className="threats">Age:</span> {ageDigit} {ageText}</li>
-                                    <li className="weight-dogs"><span className="threats">Weight will be (around):</span> {weight_will_be}</li>
-                                </li>
-                                </>
-                            )
-                        })}
-                    </ul>
-                </div>
-            </div>
-        </main>
-        <Footer/>
+                </main>
+            <Footer/>
         </>
     )
 }

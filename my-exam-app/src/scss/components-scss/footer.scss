@@ -42,8 +42,16 @@
             font-size: 16px;
         }
 
-        p {
+        a {
+            text-decoration: none;
+            color: $dark-blue;
+            font-weight: 600;
+            font-size: 16px;
             margin: 0;
+
+            &:hover{
+                font-size: 18px;
+            }
 
             @include respond-to('tablet') {
                 margin: 5px 0;

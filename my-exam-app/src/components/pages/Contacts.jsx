@@ -1,5 +1,6 @@
 import Header from "../Header";
 import Footer from "../Footer";
+import background from '../../img/background.png';
 import { useEffect, useState } from "react";
 
 const Contacts = () => {
@@ -90,74 +91,74 @@ const Contacts = () => {
 
     return (
         <>
-        <Header/>
-        <main className="contacts-container">
-            <h2 className="color-yellow">Please, fill the form:</h2>
-            <form className="form-list">
-                <div class="list-item-first-name">
-                    <label class for="text">First name:</label><br/>
-                    <input 
-                        onChange={e => nameHandler(e)} 
-                        value={name} 
-                        onBlur={e => blurHandler(e)} 
-                        name="name" 
-                        type="text"
-                    />
-                    {(nameDirty && nameError) && <div className="error">{nameError}</div>} 
-                </div>
-                <div class="list-item-last-name">
-                    <label for="text">Last name:</label><br/>
-                    <input 
-                        value={surname} 
-                        onChange={e => surnameHandler(e)} 
-                        onBlur={e => blurHandler(e)} 
-                        name="surname" 
-                        type="text"
-                    />
-                    {(surnameDirty && surnameError) && <div className="error">{surnameError}</div>} 
-                </div>
-                <div class="list-item-email">
-                    <label for="email">E-mail:</label><br/>
-                    <input 
-                        value={email} 
-                        onChange={e => emailHandler(e)} 
-                        onBlur={e => blurHandler(e)} 
-                        name="email" 
-                        type="email"
-                    />  
-                    {(emailDirty && emailError) && <div className="error">{emailError}</div>}   
-                </div>
-                <div class="list-item-phone">
-                    <label for="tel">Phone number:</label><br/>
-                    <input 
-                        value={number} 
-                        onChange={e => numberHandler(e)} 
-                        onBlur={e => blurHandler(e)} 
-                        name="number" 
-                        type="tel"
-                    />
-                    {(numberDirty && numberError) && <div className="error">{numberError}</div>} 
-                </div>
-                <div class="list-item-textarea">
-                    <label for="textarea">Comments:</label><br/>
-                    <textarea 
-                        type="textarea" 
-                        name="Your text" 
-                        id="textarea" 
-                        cols="30" 
-                        rows="1">
-                    </textarea> 
-                </div>
+            <Header/>
+                <main className="contacts-container" style={{ backgroundImage: `url(${background})`, width: '100%', backgroundSize: 'cover'}}>
+                    <h2 className="color-yellow">Please, fill the form:</h2>
+                    <form className="form-list">
+                        <div class="list-item-first-name">
+                            <label class for="text">First name:</label><br/>
+                            <input 
+                                onChange={e => nameHandler(e)} 
+                                value={name} 
+                                onBlur={e => blurHandler(e)} 
+                                name="name" 
+                                type="text"
+                            />
+                            {(nameDirty && nameError) && <div className="error">{nameError}</div>} 
+                        </div>
+                        <div class="list-item-last-name">
+                            <label for="text">Last name:</label><br/>
+                            <input 
+                                value={surname} 
+                                onChange={e => surnameHandler(e)} 
+                                onBlur={e => blurHandler(e)} 
+                                name="surname" 
+                                type="text"
+                            />
+                            {(surnameDirty && surnameError) && <div className="error">{surnameError}</div>} 
+                        </div>
+                        <div class="list-item-email">
+                            <label for="email">E-mail:</label><br/>
+                            <input 
+                                value={email} 
+                                onChange={e => emailHandler(e)} 
+                                onBlur={e => blurHandler(e)} 
+                                name="email" 
+                                type="email"
+                            />  
+                            {(emailDirty && emailError) && <div className="error">{emailError}</div>}   
+                        </div>
+                        <div class="list-item-phone">
+                            <label for="tel">Phone number:</label><br/>
+                            <input 
+                                value={number} 
+                                onChange={e => numberHandler(e)} 
+                                onBlur={e => blurHandler(e)} 
+                                name="number" 
+                                type="tel"
+                            />
+                            {(numberDirty && numberError) && <div className="error">{numberError}</div>} 
+                        </div>
+                        <div class="list-item-textarea">
+                            <label for="textarea">Comments:</label><br/>
+                            <textarea 
+                                type="textarea" 
+                                name="Your text" 
+                                id="textarea" 
+                                cols="30" 
+                                rows="1">
+                            </textarea> 
+                        </div>
 
-                <button 
-                    disabled={!formValid} 
-                    type="submit" 
-                    class="btn btn-form">
-                        Submit
-                </button>
-            </form>
-        </main>
-        <Footer/>
+                        <button 
+                            disabled={!formValid} 
+                            type="submit" 
+                            class="btn btn-form">
+                                Submit
+                        </button>
+                    </form>
+                </main>
+            <Footer/>
         </>
     )
 }

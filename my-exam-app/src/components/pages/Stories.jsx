@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from "../Header";
 import Footer from "../Footer";
-import background from '../../img/background-stories.png';
+import background from '../../img/background.png';
 import happyStories1 from '../../img/happy-stories-1.PNG';
 import happyStories2 from '../../img/happy-stories-2.PNG';
 import happyStories3 from '../../img/happy-stories-3.PNG';
@@ -22,56 +22,48 @@ const Stories = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2500,
         arrow: true,
       };
     
     return (
         <>
-        <Header/>
-        {/* style={{ backgroundImage: `url(${background})`, width: '100%'}} */}
-        <main className="stories-container" style={{ backgroundImage: `url(${background})`, width: '100%', backgroundSize: 'cover'}}>
-            <h2 className="color-yellow">Our happy stories</h2>
-            
-            <div className="slick-container ">
-                <Slider {...settings}>
-                    <div>
-                        <img src={happyStories5} alt="happy dog in the family" />
-                    </div>
-                    <div>
-                        <img src={happyStories2} alt="happy dog in the family" />
-                    </div>
-                    <div>
-                        <img src={happyStories3} alt="happy dog in the family" />
-                    </div>
-                    <div>
-                        <img src={happyStories4} alt="happy dog in the family" />
-                    </div>
+            <Header/>
+                <main className="stories-container" style={{ backgroundImage: `url(${background})`, width: '100%', backgroundSize: 'cover'}}>
+                    <h2 className="color-yellow">Our happy stories</h2>
                     
-                    <div>
-                        <img src={happyStories7} alt="happy dog in the family" />
+                    <div className="slick-container ">
+                        <Slider {...settings}>
+                            <div>
+                                <img src={happyStories5} alt="happy dog in the family" />
+                            </div>
+                            <div>
+                                <img src={happyStories2} alt="happy dog in the family" />
+                            </div>
+                            <div>
+                                <img src={happyStories3} alt="happy dog in the family" />
+                            </div>
+                            <div>
+                                <img src={happyStories4} alt="happy dog in the family" />
+                            </div>
+                            
+                            <div>
+                                <img src={happyStories7} alt="happy dog in the family" />
+                            </div>
+                            <div>
+                                <img src={happyStories8} alt="happy dog in the family" />
+                            </div>
+                            <div>
+                                <img src={happyStories9} alt="happy dog in the family" />
+                            </div>
+                            <div>
+                                <img src={happyStories1} alt="happy dog in the family" />
+                            </div>
+                        </Slider>
                     </div>
-                    <div>
-                        <img src={happyStories8} alt="happy dog in the family" />
-                    </div>
-                    <div>
-                        <img src={happyStories9} alt="happy dog in the family" />
-                    </div>
-                    <div>
-                        <img src={happyStories1} alt="happy dog in the family" />
-                    </div>
-                </Slider>
-            </div>
-            {/* <blockquote className="quote">
-                <div className="quote-holder">
-                    <p><span className="color-yellow">“</span>Dogs are not our whole life, 
-                    but they make our lives whole.</p>
-                </div>
-                <figcaption className="author">Roger Caras</figcaption>
-            </blockquote> */} 
-        </main>
-        <Footer/>
+                </main>
+            <Footer/>
         </>
     )
 }
