@@ -10,11 +10,6 @@ const Contacts = () => {
     const [email, setEmail] = useState('');
     const [number, setNumber] = useState('');
 
-    const [nameDirty, setNameDirty] = useState(false);
-    const [surnameDirty, setSurnameDirty] = useState(false);
-    const [emailDirty, setEmailDirty] = useState(false);
-    const [numberDirty, setNumberDirty] = useState(false);
-
     const [nameError, setNameError] = useState('');
     const [surnameError, setSurnameError] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -71,24 +66,6 @@ const Contacts = () => {
         }
     };
 
-    const blurHandler = (e) => {
-        switch (e.target.name) {
-            case 'name':
-                setNameDirty(true);
-                break;
-            case 'surname':
-                setSurnameDirty(true);
-                break;
-            case 'email':
-                setEmailDirty(true);
-                break;
-            case 'number':
-                setNumberDirty(true);
-                break;
-            default:;
-        }
-    }
-
     return (
         <>
             <Header/>
@@ -100,44 +77,40 @@ const Contacts = () => {
                             <input 
                                 onChange={e => nameHandler(e)} 
                                 value={name} 
-                                onBlur={e => blurHandler(e)} 
                                 name="name" 
                                 type="text"
                             />
-                            {(nameDirty && nameError) && <div className="error">{nameError}</div>} 
+                            {(nameError) && <div className="error">{nameError}</div>} 
                         </div>
                         <div class="list-item-last-name">
                             <label for="text">Last name:</label><br/>
                             <input 
                                 value={surname} 
                                 onChange={e => surnameHandler(e)} 
-                                onBlur={e => blurHandler(e)} 
                                 name="surname" 
                                 type="text"
                             />
-                            {(surnameDirty && surnameError) && <div className="error">{surnameError}</div>} 
+                            {(surnameError) && <div className="error">{surnameError}</div>} 
                         </div>
                         <div class="list-item-email">
                             <label for="email">E-mail:</label><br/>
                             <input 
                                 value={email} 
                                 onChange={e => emailHandler(e)} 
-                                onBlur={e => blurHandler(e)} 
                                 name="email" 
                                 type="email"
                             />  
-                            {(emailDirty && emailError) && <div className="error">{emailError}</div>}   
+                            {(emailError) && <div className="error">{emailError}</div>}   
                         </div>
                         <div class="list-item-phone">
                             <label for="tel">Phone number:</label><br/>
                             <input 
                                 value={number} 
                                 onChange={e => numberHandler(e)} 
-                                onBlur={e => blurHandler(e)} 
                                 name="number" 
                                 type="tel"
                             />
-                            {(numberDirty && numberError) && <div className="error">{numberError}</div>} 
+                            {(numberError) && <div className="error">{numberError}</div>} 
                         </div>
                         <div class="list-item-textarea">
                             <label for="textarea">Comments:</label><br/>
