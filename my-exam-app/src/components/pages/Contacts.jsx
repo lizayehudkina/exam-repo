@@ -16,15 +16,6 @@ const Contacts = () => {
     const [numberError, setNumberError] = useState('');
 
     const [formValid, setFormValid] = useState(false);
-
-    useEffect(() => {
-        if(nameError || surnameError || emailError || numberError) {
-            setFormValid(false)
-        } else {
-            setFormValid(true)
-        }
-    }, [nameError, surnameError, emailError, numberError])
-
     
     const nameHandler = (e) => {
         setName(e.target.value)
